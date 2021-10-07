@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Publishing
+public class Publishing     //Издательство
 {
     private String name;	//Название
     private String city;	//Город
