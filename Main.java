@@ -9,9 +9,9 @@ public class Main
         Publishing publishing_2 = new Publishing("Издательство №2", "г. Барнаул");		//Создание через конструктор с параметрами
 
         //Печать созданных объектов
-        System.out.printf("\nПечать данных объектов\npublishing1 = ");
+        System.out.printf("\nПечать данных объектов\npublishing_1 = ");
         publishing_1.Display();
-        System.out.printf("\npublishing2 = ");
+        System.out.printf("\npublishing_2 = ");
         publishing_2.Display();
         System.out.printf("\n");
 
@@ -19,14 +19,14 @@ public class Main
         System.out.printf("\nВвод значений всех полей объекта\n");
 
         publishing_1.Read();
-        System.out.printf("\npublishing1 = ");
+        System.out.printf("\npublishing_1 = ");
         publishing_1.Display();
         System.out.printf("\n\n");
 
         //Инициализация значений
         System.out.printf("\n\nИнициализация значений");
         publishing_1.Init("Паркер", "г. Вашингтон");
-        System.out.printf("\npublishing1 = ");
+        System.out.printf("\npublishing_1 = ");
         publishing_1.Display();
 
         //Проверка находится ли издательство в заданном городе
