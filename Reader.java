@@ -1,10 +1,12 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class Reader
 {
 	private String full_name;	//ФИО
 	private Date birth;			//Дата рождения
 	private Address address;	//Адрес
 	private String doc_number;		//Номер документа, удостоверяющего личность
+    private ArrayList<Book> books;  //Книги, которые находятся у читателя
 
     //Конструктор
     public Reader()
@@ -13,6 +15,7 @@ public class Reader
         birth = new Date();
         address = new Address();
         doc_number = "01 10 123456";
+        books = new ArrayList<Book>();
     }
 
     //Конструктор с параметром
@@ -22,6 +25,7 @@ public class Reader
         birth = new Date(birth_date);
         this.address = address;
         this.doc_number = doc_number;
+        books = new ArrayList<Book>();
     }
 
     //Конструктор с параметром 
@@ -31,6 +35,7 @@ public class Reader
         birth = new Date(birth_date);
         this.address = address;
         this.doc_number = Integer.toString(doc_number);
+        books = new ArrayList<Book>();
     }
 
     //Инициализация всех полей
@@ -146,5 +151,31 @@ public class Reader
     public boolean IsBirthday(Date day)
     {
         return birth.IsAnniversary(day);
+    }
+
+    //Взятие книги
+    public boolean TakeBook(Book book)
+    {
+        boolean result = false;
+
+        if(!books.contains(book))
+        {
+            books.add(book);
+            result = true;
+        }
+        return result;
+    }
+
+    //Сдача книги
+    public boolean ReturnBook(Book book)
+    {
+        boolean result = false;
+
+        if(books.contains(book))
+        {
+            books.remove(book);
+            result = true;
+        }
+        return result;
     }
 }
