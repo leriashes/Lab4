@@ -40,6 +40,17 @@ public class Date	//Дата
         this.year = year;
     }
 
+    //Конструктор с параметром
+    public Date(Date date)
+    {
+        sec = date.sec;
+        min = date.min;
+        hour = date.hour;
+        day = date.day;
+        month = date.month;
+        year = date.year;
+    }
+
     //Инициализация всех полей
     public void Init(int seconds, int minutes, int hours, int day, int month, int year) 
     {

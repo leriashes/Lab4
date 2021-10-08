@@ -19,7 +19,7 @@ public class Reader
     public Reader(String full_name, Date birth_date, Address address, String doc_number)
     {
         this.full_name = full_name;
-        birth = birth_date;
+        birth = new Date(birth_date);
         this.address = address;
         this.doc_number = doc_number;
     }
@@ -28,7 +28,7 @@ public class Reader
     public Reader(String full_name, Date birth_date, Address address, int doc_number)
     {
         this.full_name = full_name;
-        birth = birth_date;
+        birth = new Date(birth_date);
         this.address = address;
         this.doc_number = Integer.toString(doc_number);
     }
@@ -37,7 +37,7 @@ public class Reader
     public void Init(String full_name, Date birth_date, Address address, String doc_number)
     {
         this.full_name = full_name;
-        birth = birth_date;
+        birth = new Date(birth_date);
         this.address = address;
         this.doc_number = doc_number;
     }
@@ -46,7 +46,7 @@ public class Reader
     public void Init(String full_name, Date birth_date, Address address, int doc_number)
     {
         this.full_name = full_name;
-        birth = birth_date;
+        birth = new Date(birth_date);
         this.address = address;
         this.doc_number = Integer.toString(doc_number);
     }

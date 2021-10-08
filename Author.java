@@ -17,7 +17,7 @@ public class Author	//Автор
     public Author(String full_name, Date birth_date, String country)
     {
         this.full_name = full_name;
-        birth = birth_date;
+        birth = new Date(birth_date);
         this.country = country;
     }
 
@@ -33,7 +33,7 @@ public class Author	//Автор
     public void Init(String full_name, Date birth_date, String country)
     {
         this.full_name = full_name;
-        birth = birth_date;
+        birth = new Date(birth_date);
         this.country = country;
     }
 
