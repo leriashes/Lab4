@@ -39,8 +39,7 @@ public class Address
         boolean f = true;
         Scanner inp = new Scanner(System.in, "cp866");
 
-        String shouse;
-        String sflat;
+        String str;
 
         System.out.print("¬ведите название населЄнного пункта (например: г. Ѕарнаул): ");
         do
@@ -77,11 +76,11 @@ public class Address
         System.out.print("\n¬ведите номер дома: ");
         do
         {
-            shouse = inp.nextLine();
+            str = inp.nextLine();
 
             try 
             {
-                house = Integer.parseInt(shouse);
+                house = Integer.parseInt(str);
             }
             catch (NumberFormatException e)
             {
@@ -102,11 +101,11 @@ public class Address
         System.out.print("\n¬ведите номер квартиры: ");
         do
         {
-            sflat = inp.nextLine();
+            str = inp.nextLine();
 
             try 
             {
-                flat = Integer.parseInt(sflat);
+                flat = Integer.parseInt(str);
             }
             catch (NumberFormatException e)
             {
