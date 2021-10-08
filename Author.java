@@ -141,4 +141,4 @@ public class Author	//Автор
 
         return result;
     }
-};
+}

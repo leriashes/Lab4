@@ -672,4 +672,4 @@ public class Date	//Дата
     {
         return (day == second_date.day && month == second_date.month && year <= second_date.year);
     }
-};
+}

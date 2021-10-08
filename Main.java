@@ -1,7 +1,7 @@
 public class Main 
 {
-     public static void main(String[] args) 
-     {
+    public static void main(String[] args) 
+    {
         //Работа с объектами класса Date
         System.out.println("Работа со объектами класса Date");
 
@@ -310,5 +310,67 @@ public class Main
         {
             System.out.println(": нет.");
         }
+
+
+
+        //Работа с объектами класса Book
+        System.out.println("\n\n\nРабота со объектами класса Book");
+
+        Book kniga;
+        /*
+        Book book_1 = new Book();	//Создание через конструктор без параметров
+        
+        //Создание через конструкторы с параметрами
+        Book book_2 = new Book("Новый мир", author_2, 121, "Фантастика", publishing_2, 2012);
+        Book book_3 = new Book("Петька и Васька", author_3, 76, "Рассказы", publishing_1, 2019);
+
+        //Печать созданных объектов
+        System.out.print("\nПечать данных  объектов\nbook_1 ");
+        book_1.Display();
+        System.out.print("\n\nbook_2 ");
+        book_2.Display();
+        System.out.print("\n\nbook_3 ");
+        book_3.Display();
+        System.out.println();
+
+        //Ввод значений всех полей объекта
+        System.out.println("\n\nВвод значений всех полей объекта");
+
+        book_1.Read();
+        System.out.print("\n\nbook_1 ");
+        book_1.Display();
+        System.out.println();
+
+        //Инициализация значений
+        System.out.print("\n\nИнициализация значений");
+        book_1.Init("Петька и Кот", author_3, 65, "Ужасы", publishing_1, 2005);
+        System.out.print("\nbook_1 ");
+        book_1.Display();
+        System.out.println();
+
+        //Привязка читателя
+        System.out.print("\n\nПривязка читателя\nbook_2 ");
+        book_2.AddReader(&reader_1);
+        book_2.Display();
+        
+        //Сравнение читателей книг
+        System.out.println("\n\nСравнение читателей книг");
+        book_3.Display();
+        System.out.println("\n\nи \n");
+        book_2.Display();
+        if (book_3.CmpReader(book_2))
+        {
+            System.out.println("\n\nодин и тот же читатель.");
+        }
+        else
+        {
+            System.out.println("\n\nразные читатели.");
+        }
+
+        //Отвязка читателя
+        System.out.print("\n\nОтвязка читателя\nbook_2 ");
+        book_2.AddReader(null);
+        book_2.Display();
+        System.out.println();*/
     }
 }

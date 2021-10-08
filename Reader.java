@@ -147,4 +147,4 @@ public class Reader
     {
         return birth.IsAnniversary(day);
     }
-};
+}
