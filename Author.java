@@ -4,6 +4,7 @@ public class Author	//Автор
 	private String full_name;	//ФИО
 	private Date birth;			//Дата рождения
 	private String country;	//Страна
+    private ArrayList<Book> books;      //Книги, написанные писателем
 
     //Конструктор
     public Author()
@@ -11,6 +12,7 @@ public class Author	//Автор
         full_name = "Иванов Иван Иванович";
         birth = new Date();
         country = "Россия";
+        books = new ArrayList<Book>();
     }
 
     //Конструктор с параметром
@@ -19,6 +21,7 @@ public class Author	//Автор
         this.full_name = full_name;
         birth = new Date(birth_date);
         this.country = country;
+        books = new ArrayList<Book>();
     }
 
     //Конструктор с параметром
@@ -27,6 +30,7 @@ public class Author	//Автор
         this.full_name = full_name;
         birth = new Date(0, 0,  0, day, month, year);
         this.country = country;
+        books = new ArrayList<Book>();
     }
 
     //Инициализация значений всех полей
@@ -140,5 +144,14 @@ public class Author	//Автор
         }
 
         return result;
+    }
+
+    //Новая книга
+    public void NewBook(Book book)
+    {
+        if(!books.contains(book))
+        {
+            books.add(book);
+        }
     }
 }

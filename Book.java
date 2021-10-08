@@ -15,6 +15,7 @@ public class Book
     {
         title = "Котофей";
         author = new Author();
+        author.NewBook(this);
         pages_number = 50;
         genre = "Сказки";
         publishing = new Publishing();
@@ -26,6 +27,7 @@ public class Book
     {
         this.title = title;
         this.author = author;
+        author.NewBook(this);
         this.pages_number = Math.abs(pages_number);
         this.genre = genre;
         this.publishing = publishing;
@@ -37,9 +39,10 @@ public class Book
     {
         this.title = title;
         this.author = author;
+        author.NewBook(this);
         this.pages_number = Math.abs(pages_number);
         this.genre = genre;
-        this.reader = reader;
+        this.AddReader(reader);
         this.publishing = publishing;
         this.publ_year = Math.abs(publication_year);
     }
@@ -49,6 +52,7 @@ public class Book
     {
         this.title = title;
         this.author = author;
+        author.NewBook(this);
         this.pages_number = Math.abs(pages_number);
         this.genre = genre;
         this.publishing = publishing;
@@ -60,9 +64,10 @@ public class Book
     {
         this.title = title;
         this.author = author;
+        author.NewBook(this);
         this.pages_number = Math.abs(pages_number);
         this.genre = genre;
-        this.reader = reader;
+        this.AddReader(reader);
         this.publishing = publishing;
         this.publ_year = Math.abs(publication_year);
     }
@@ -92,6 +97,7 @@ public class Book
 
         System.out.println();
         author.Read();
+        author.NewBook(this);
 
         f = true;
         System.out.print("\nВведите количество страниц в книге: ");
@@ -192,7 +198,7 @@ public class Book
         {
             reader.TakeBook(this);
         }
-        
+
         this.reader = reader;
     }
 
