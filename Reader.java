@@ -160,6 +160,7 @@ public class Reader
 
         if(!books.contains(book))
         {
+            book.AddReader(this);
             books.add(book);
             result = true;
         }
@@ -173,6 +174,7 @@ public class Reader
 
         if(books.contains(book))
         {
+            book.AddReader(null);
             books.remove(book);
             result = true;
         }

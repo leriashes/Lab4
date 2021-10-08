@@ -184,6 +184,15 @@ public class Book
     //Привязка читателя
     public void AddReader(Reader reader)
     {
+        if (reader == null)
+        {
+            this.reader.ReturnBook(this);
+        }
+        else
+        {
+            reader.TakeBook(this);
+        }
+        
         this.reader = reader;
     }
 
