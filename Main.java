@@ -166,6 +166,48 @@ public class Main
 
 
 
+        //Работа с объектами класса Address
+        System.out.println("\n\n\n\nРабота со объектами класса Address");
+
+        Address address_1 = new Address();	//Создание через конструктор без параметров
+        Address address_2 = new Address("г. Новосибирск", "ул. Сиреневая", 12, 4);		//Создание через конструкторы с параметрами
+
+        //Печать созданных объектов
+        System.out.print("\nПечать данных статических объектов\naddress_1 = ");
+        address_1.Display();
+        System.out.print("\naddress_2 = ");
+        address_2.Display();
+        System.out.println();
+
+        //Ввод значений всех полей объекта
+        System.out.println("\nВвод значений всех полей объекта");
+
+        address_1.Read();
+        System.out.print("\naddress_1 = ");
+        address_1.Display();
+        System.out.println();
+        System.out.println();
+
+        //Инициализация значений
+        System.out.print("\n\nИнициализация значений");
+        address_1.Init("г. Троицк", "ул. Текстильщиков", 6, 2);
+        System.out.print("\naddress_1 = ");
+        address_1.Display();
+
+        //Проверка совпадения города
+        System.out.println("\n\nПроверка родился ли автор в заданной стране");
+        address_1.Display();
+        System.out.print(" и г. Барнаул");
+        if (address_1.City("г. Барнаул"))
+        {
+            System.out.println(": да.");
+        }
+        else
+        {
+            System.out.println(": нет.");
+        }
+
+
         //Работа с объектами класса Publishing
         System.out.println("\n\n\n\nРабота со объектами класса Publishing");
 
