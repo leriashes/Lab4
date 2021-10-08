@@ -3,7 +3,7 @@ public class Main
     public static void main(String[] args) 
     {
         //Работа с объектами класса Date
-        System.out.println("Работа со объектами класса Date");
+        System.out.println("Работа с объектами класса Date");
 
         Date date_1 = new Date();	//Создание через конструктор без параметров
         
@@ -116,7 +116,7 @@ public class Main
 
 
         //Работа с объектами класса Author
-        System.out.println("\n\n\nРабота со объектами класса Author");
+        System.out.println("\n\n\nРабота с объектами класса Author");
         Author author_1 = new Author();	//Создание через конструктор без параметров
             
         //Создание через конструкторы с параметрами
@@ -172,7 +172,7 @@ public class Main
 
 
         //Работа с объектами класса Address
-        System.out.println("\n\n\nРабота со объектами класса Address");
+        System.out.println("\n\n\nРабота с объектами класса Address");
 
         Address address_1 = new Address();	//Создание через конструктор без параметров
         Address address_2 = new Address("г. Новосибирск", "ул. Сиреневая", 12, 4);		//Создание через конструкторы с параметрами
@@ -215,7 +215,7 @@ public class Main
 
 
         //Работа с объектами класса Reader
-        System.out.println("\n\n\nРабота со объектами класса Reader");
+        System.out.println("\n\n\nРабота с объектами класса Reader");
 
         Reader reader_1 = new Reader();	//Создание через конструктор без параметров
 
@@ -272,7 +272,7 @@ public class Main
 
 
         //Работа с объектами класса Publishing
-        System.out.println("\n\n\nРабота со объектами класса Publishing");
+        System.out.println("\n\n\nРабота с объектами класса Publishing");
 
         Publishing publishing_1 = new Publishing();	//Создание через конструктор без параметров
         Publishing publishing_2 = new Publishing("Издательство №2", "г. Барнаул");		//Создание через конструктор с параметрами
@@ -314,13 +314,13 @@ public class Main
 
 
         //Работа с объектами класса Book
-        System.out.println("\n\n\nРабота со объектами класса Book");
+        System.out.println("\n\n\nРабота с объектами класса Book");
         
         Book book_1 = new Book();	//Создание через конструктор без параметров
         
         //Создание через конструкторы с параметрами
         Book book_2 = new Book("Новый мир", author_2, 121, "Фантастика", publishing_2, 2012);
-        Book book_3 = new Book("Петька и Васька", author_3, 76, "Рассказы", publishing_1, 2019);
+        Book book_3 = new Book("Петька и Васька", author_3, 76, "Рассказы", reader_1, publishing_1, 2019);
 
         //Печать созданных объектов
         System.out.print("\nПечать данных  объектов\nbook_1 ");
