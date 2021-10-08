@@ -111,6 +111,61 @@ public class Main
 
 
 
+        //Работа с объектами класса Author
+        System.out.println("\n\n\n\nРабота со объектами класса Author");
+        Author author_1 = new Author();	//Создание через конструктор без параметров
+            
+        //Создание через конструкторы с параметрами
+        Author author_2 = new Author("Петров Пётр Петрович", date_1, "Украина");
+        Author author_3 = new Author("Сидорова Светлана Сергеевна", 12, 12, 1972, "Беларусь");
+
+        //Печать созданных объектов
+        System.out.print("\nПечать данных объектов\nauthor_1 = ");
+        author_1.Display("all");
+        System.out.print("\nauthor_2 = ");
+        author_2.Display("all");
+        System.out.print("\nauthor_3 = ");
+        author_3.Display("all");
+        System.out.println();
+
+        //Ввод значений всех полей объекта
+        System.out.println("\nВвод значений всех полей объекта");
+
+        author_1.Read();
+        System.out.print("\nauthor_1 = ");
+        author_1.Display("all");
+        System.out.println();
+        System.out.println();
+
+        //Вывод значений полей в выбранном формате
+        System.out.print("\n\nВывод значений полей в выбранном формате (помимо полного вывода)\nauthor_1 (FullName) = ");
+        author_1.Display("FullName");
+        System.out.print("\nauthor_1 (FullName (Country)) = ");
+        author_1.Display("FullName (Country)");
+        System.out.print("\nauthor_1 (FullName (BirthDate)) = ");
+        author_1.Display("FullName (BirthDate)");
+
+        //Инициализация значений
+        System.out.print("\n\nИнициализация значений");
+        author_2.Init("Паркер Энн", date_1, "США");
+        System.out.print("\nauthor_2 = ");
+        author_2.Display("all");
+
+        //Проверка родился ли автор в заданной стране
+        System.out.println("\n\nПроверка родился ли автор в заданной стране");
+        author_1.Display("all");
+        System.out.print(" и страна Россия");
+        if (author_1.BornIn("Россия"))
+        {
+            System.out.println(": да.");
+        }
+        else
+        {
+            System.out.println(": нет.");
+        }
+
+
+
         //Работа с объектами класса Publishing
         System.out.println("\n\n\n\nРабота со объектами класса Publishing");
 
