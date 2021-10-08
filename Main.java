@@ -10,7 +10,7 @@ public class Main
         //Создание через конструкторы с параметрами
         Date date_2 = new Date(12, 02, 2004);
         Date date_3 = new Date(26, 35, 12, 13, 05, 1997);
-
+        
         //Печать созданных объектов
         System.out.print("\nПечать данных объектов\ndate_1 = ");
         date_1.Display("all");
@@ -315,9 +315,7 @@ public class Main
 
         //Работа с объектами класса Book
         System.out.println("\n\n\nРабота со объектами класса Book");
-
-        Book kniga;
-        /*
+        
         Book book_1 = new Book();	//Создание через конструктор без параметров
         
         //Создание через конструкторы с параметрами
@@ -346,12 +344,17 @@ public class Main
         book_1.Init("Петька и Кот", author_3, 65, "Ужасы", publishing_1, 2005);
         System.out.print("\nbook_1 ");
         book_1.Display();
+
+        book_3.Init("Васька и Пёс", author_2, 124, "Комедия", reader_3, publishing_2, 2012);
+        System.out.print("\n\nbook_3 ");
+        book_3.Display();
         System.out.println();
 
         //Привязка читателя
         System.out.print("\n\nПривязка читателя\nbook_2 ");
-        book_2.AddReader(&reader_1);
+        book_2.AddReader(reader_1);
         book_2.Display();
+        System.out.println();
         
         //Сравнение читателей книг
         System.out.println("\n\nСравнение читателей книг");
@@ -371,6 +374,6 @@ public class Main
         System.out.print("\n\nОтвязка читателя\nbook_2 ");
         book_2.AddReader(null);
         book_2.Display();
-        System.out.println();*/
+        System.out.println();
     }
 }
