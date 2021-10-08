@@ -21,7 +21,7 @@ public class Main
         System.out.println();
 
         //Ввод только времени
-        System.out.println("\nВвод только времени");
+        System.out.println("\n\nВвод только времени");
 
         date_1.ReadTime();
         System.out.printf("\ndate_1 = ");
@@ -53,6 +53,7 @@ public class Main
         date_1.Display("DD-MM-YYYY");
         System.out.print("\ndate_1 (YYYY-MM-DD) = ");
         date_1.Display("YYYY-MM-DD");
+        System.out.println();
 
         //Получение текущей даты и времени
         System.out.print("\n\nТекущая дата и время\ndate_2 = ");
@@ -68,6 +69,7 @@ public class Main
         (date_2.Compare(date_3)).Display("CompareResult");
         System.out.println();
         (date_2.Compare(date_3)).Display("CompareResultRU");
+        System.out.println();
 
         //Инициализация значений
         System.out.print("\n\nИнициализация значений");
@@ -78,10 +80,12 @@ public class Main
         date_3.Init(30, 5, 7, 2, 2, 1);
         System.out.print("\ndate_3 = ");
         date_3.Display("all");
+        System.out.println();
 
         //Прибавление времени к дате
         System.out.print("\n\nПрибавление времени date_3 к дате date_1: ");
         (date_1.Add(date_3)).Display("all");
+        System.out.println();
 
         //Проверка является дата годовщиной другой
         System.out.println("\n\nПроверка является ли вторая дата 'годовщиной' первой\n");
@@ -102,17 +106,17 @@ public class Main
         date_3.Display("all");
         if (date_1.IsAnniversary(date_3))
         {
-            System.out.print(": да.");
+            System.out.println(": да.");
         }
         else
         {
-            System.out.print(": нет.");
+            System.out.println(": нет.");
         }
 
 
 
         //Работа с объектами класса Author
-        System.out.println("\n\n\n\nРабота со объектами класса Author");
+        System.out.println("\n\n\nРабота со объектами класса Author");
         Author author_1 = new Author();	//Создание через конструктор без параметров
             
         //Создание через конструкторы с параметрами
@@ -129,12 +133,11 @@ public class Main
         System.out.println();
 
         //Ввод значений всех полей объекта
-        System.out.println("\nВвод значений всех полей объекта");
+        System.out.println("\n\nВвод значений всех полей объекта");
 
         author_1.Read();
         System.out.print("\nauthor_1 = ");
         author_1.Display("all");
-        System.out.println();
         System.out.println();
 
         //Вывод значений полей в выбранном формате
@@ -144,12 +147,14 @@ public class Main
         author_1.Display("FullName (Country)");
         System.out.print("\nauthor_1 (FullName (BirthDate)) = ");
         author_1.Display("FullName (BirthDate)");
+        System.out.println();
 
         //Инициализация значений
         System.out.print("\n\nИнициализация значений");
         author_2.Init("Паркер Энн", date_1, "США");
         System.out.print("\nauthor_2 = ");
         author_2.Display("all");
+        System.out.println();
 
         //Проверка родился ли автор в заданной стране
         System.out.println("\n\nПроверка родился ли автор в заданной стране");
@@ -167,25 +172,24 @@ public class Main
 
 
         //Работа с объектами класса Address
-        System.out.println("\n\n\n\nРабота со объектами класса Address");
+        System.out.println("\n\n\nРабота со объектами класса Address");
 
         Address address_1 = new Address();	//Создание через конструктор без параметров
         Address address_2 = new Address("г. Новосибирск", "ул. Сиреневая", 12, 4);		//Создание через конструкторы с параметрами
 
         //Печать созданных объектов
-        System.out.print("\nПечать данных статических объектов\naddress_1 = ");
+        System.out.print("\nПечать данных объектов\naddress_1 = ");
         address_1.Display();
         System.out.print("\naddress_2 = ");
         address_2.Display();
         System.out.println();
 
         //Ввод значений всех полей объекта
-        System.out.println("\nВвод значений всех полей объекта");
+        System.out.println("\n\nВвод значений всех полей объекта");
 
         address_1.Read();
         System.out.print("\naddress_1 = ");
         address_1.Display();
-        System.out.println();
         System.out.println();
 
         //Инициализация значений
@@ -193,6 +197,7 @@ public class Main
         address_1.Init("г. Троицк", "ул. Текстильщиков", 6, 2);
         System.out.print("\naddress_1 = ");
         address_1.Display();
+        System.out.println();
 
         //Проверка совпадения города
         System.out.println("\n\nПроверка родился ли автор в заданной стране");
@@ -209,7 +214,7 @@ public class Main
 
 
         //Работа с объектами класса Publishing
-        System.out.println("\n\n\n\nРабота со объектами класса Publishing");
+        System.out.println("\n\n\nРабота со объектами класса Publishing");
 
         Publishing publishing_1 = new Publishing();	//Создание через конструктор без параметров
         Publishing publishing_2 = new Publishing("Издательство №2", "г. Барнаул");		//Создание через конструктор с параметрами
@@ -222,12 +227,10 @@ public class Main
         System.out.println();
 
         //Ввод значений всех полей объекта
-        System.out.println("\nВвод значений всех полей объекта");
-
+        System.out.println("\n\nВвод значений всех полей объекта");
         publishing_1.Read();
         System.out.print("\npublishing_1 = ");
         publishing_1.Display();
-        System.out.println();
         System.out.println();
 
         //Инициализация значений
@@ -235,6 +238,7 @@ public class Main
         publishing_1.Init("Паркер", "г. Вашингтон");
         System.out.print("\npublishing_1 = ");
         publishing_1.Display();
+        System.out.println();
 
         //Проверка находится ли издательство в заданном городе
         System.out.println("\n\nПроверка находится ли издательство в заданном городе");
