@@ -177,6 +177,16 @@ public class Date	//Дата
         return;
     }
 
+    //Ввод значений всех полей
+    public void Read() 
+    {
+        ReadTime();
+        System.out.println();
+        ReadDate();
+
+        return;
+    }
+
     //Вывод значений всех полей
     public void Display(String format) 
     {
