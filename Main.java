@@ -1,45 +1,155 @@
 public class Main 
 {
-     public static void main(String[] args) {
+     public static void main(String[] args) 
+     {
+        //Работа с объектами класса Date
+        System.out.println("Работа со объектами класса Date");
+
+        Date date_1 = new Date();	//Создание через конструктор без параметров
+        
+        //Создание через конструкторы с параметрами
+        Date date_2 = new Date(12, 02, 2004);
+        Date date_3 = new Date(26, 35, 12, 13, 05, 1997);
+
+        //Печать созданных объектов
+        System.out.print("\nПечать данных объектов\ndate_1 = ");
+        date_1.Display("all");
+        System.out.print("\ndate_2 = ");
+        date_2.Display("all");
+        System.out.print("\ndate_3 = ");
+        date_3.Display("all");
+        System.out.println();
+
+        //Ввод только времени
+        System.out.println("\nВвод только времени");
+
+        date_1.ReadTime();
+        System.out.printf("\ndate_1 = ");
+        date_1.Display("all");
+        System.out.println();
+
+        ///Ввод только даты
+        System.out.printf("\n\nВвод только даты\n");
+
+        date_1.ReadDate();
+        System.out.print("\ndate_1 = ");
+        date_1.Display("all");
+        System.out.println();
+
+        //Вывод значений полей в выбранном формате
+        System.out.print("\n\nВывод значений полей в выбранном формате (помимо полного вывода)\ndate_1 (hh:mm:ss) = ");
+        date_1.Display("hh:mm:ss");
+        System.out.print("\ndate_1 (hh:mm) = ");
+        date_1.Display("hh:mm");
+        System.out.print("\ndate_1 (mm:ss) = ");
+        date_1.Display("mm:ss");
+        System.out.print("\ndate_1 (DD.MM.YYYY) = ");
+        date_1.Display("DD.MM.YYYY");
+        System.out.print("\ndate_1 (DD/MM/YYYY) = ");
+        date_1.Display("DD/MM/YYYY");
+        System.out.print("\ndate_1 (MM.DD.YYYY) = ");
+        date_1.Display("MM.DD.YYYY");
+        System.out.print("\ndate_1 (DD-MM-YYYY) = ");
+        date_1.Display("DD-MM-YYYY");
+        System.out.print("\ndate_1 (YYYY-MM-DD) = ");
+        date_1.Display("YYYY-MM-DD");
+
+        //Получение текущей даты и времени
+        System.out.print("\n\nТекущая дата и время\ndate_2 = ");
+        date_2.Now();
+        date_2.Display("all");
+
+        //Сравнение дат
+        System.out.println("\n\n\nСравнение дат (сколько времени от первой даты до второй)\n");
+        date_2.Display("all");
+        System.out.print(" и ");
+        date_3.Display("all");
+        System.out.println();
+        (date_2.Compare(date_3)).Display("CompareResult");
+        System.out.println();
+        (date_2.Compare(date_3)).Display("CompareResultRU");
+
+        //Инициализация значений
+        System.out.print("\n\nИнициализация значений");
+        date_1.Init(30, 5, 11, 27, 6, 2010);
+        System.out.print("\ndate_1 = ");
+        date_1.Display("all");
+
+        date_3.Init(30, 5, 7, 2, 2, 1);
+        System.out.print("\ndate_3 = ");
+        date_3.Display("all");
+
+        //Прибавление времени к дате
+        System.out.print("\n\nПрибавление времени date_3 к дате date_1: ");
+        (date_1.Add(date_3)).Display("all");
+
+        //Проверка является дата годовщиной другой
+        System.out.println("\n\nПроверка является ли вторая дата 'годовщиной' первой\n");
+        date_1.Display("all");
+        System.out.print(" и ");
+        date_2.Display("all");
+        if (date_1.IsAnniversary(date_2))
+        {
+            System.out.println(": да.");
+        }
+        else
+        {
+            System.out.println(": нет.");
+        }
+
+        date_1.Display("all");
+        System.out.print(" и ");
+        date_3.Display("all");
+        if (date_1.IsAnniversary(date_3))
+        {
+            System.out.print(": да.");
+        }
+        else
+        {
+            System.out.print(": нет.");
+        }
+
+
 
         //Работа с объектами класса Publishing
-        System.out.printf("\n\n\n\nРабота со объектами класса Publishing\n");
+        System.out.println("\n\n\n\nРабота со объектами класса Publishing");
 
         Publishing publishing_1 = new Publishing();	//Создание через конструктор без параметров
         Publishing publishing_2 = new Publishing("Издательство №2", "г. Барнаул");		//Создание через конструктор с параметрами
 
         //Печать созданных объектов
-        System.out.printf("\nПечать данных объектов\npublishing_1 = ");
+        System.out.print("\nПечать данных объектов\npublishing_1 = ");
         publishing_1.Display();
-        System.out.printf("\npublishing_2 = ");
+        System.out.print("\npublishing_2 = ");
         publishing_2.Display();
-        System.out.printf("\n");
+        System.out.println();
 
         //Ввод значений всех полей объекта
-        System.out.printf("\nВвод значений всех полей объекта\n");
+        System.out.println("\nВвод значений всех полей объекта");
 
         publishing_1.Read();
-        System.out.printf("\npublishing_1 = ");
+        System.out.print("\npublishing_1 = ");
         publishing_1.Display();
-        System.out.printf("\n\n");
+        System.out.println();
+        System.out.println();
 
         //Инициализация значений
-        System.out.printf("\n\nИнициализация значений");
+        System.out.print("\n\nИнициализация значений");
         publishing_1.Init("Паркер", "г. Вашингтон");
-        System.out.printf("\npublishing_1 = ");
+        System.out.print("\npublishing_1 = ");
         publishing_1.Display();
 
         //Проверка находится ли издательство в заданном городе
-        System.out.printf("\n\nПроверка находится ли издательство в заданном городе\n");
+        System.out.println("\n\nПроверка находится ли издательство в заданном городе");
         publishing_1.Display();
-        System.out.printf(" и г. Москва");
+        System.out.print(" и г. Москва");
         if (publishing_1.IsHere("г. Москва"))
         {
-            System.out.printf(": да.\n");
+            System.out.println(": да.");
         }
         else
         {
-            System.out.printf(": нет.\n");
+            System.out.println(": нет.");
         }
     }
 }
