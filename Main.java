@@ -213,6 +213,64 @@ public class Main
         }
 
 
+
+        //Работа с объектами класса Reader
+        System.out.println("\n\n\nРабота со объектами класса Reader");
+
+        Reader reader_1 = new Reader();	//Создание через конструктор без параметров
+
+        //Создание через конструкторы с параметрами
+        Reader reader_2 = new Reader("Петров Пётр Петрович", date_1, address_1, "0110 120954");
+        Reader reader_3 = new Reader("Сидорова Светлана Сергеевна", date_2, address_2, 987654);
+
+        //Печать созданных объектов
+        System.out.print("\nПечать данных объектов\nreader_1 = ");
+        reader_1.Display("all");
+        System.out.print("\nreader_2 = ");
+        reader_2.Display("all");
+        System.out.print("\nreader_3 = ");
+        reader_3.Display("all");
+        System.out.println();
+
+        //Ввод значений всех полей объекта
+        System.out.println("\n\nВвод значений всех полей объекта");
+        reader_1.Read();
+        System.out.print("\nreader_1 = ");
+        reader_1.Display("all");
+        System.out.println();
+
+        //Вывод значений полей в выбранном формате
+        System.out.print("\n\nВывод значений полей в выбранном формате (помимо полного вывода)\nreader_1 (FullName) = ");
+        reader_1.Display("FullName");
+        System.out.print("\nreader_1 ([DocNumber] FullName) = ");
+        reader_1.Display("[DocNumber] FullName");
+        System.out.print("\nreader_1 (FullName (BirthDate)) = ");
+        reader_1.Display("FullName (BirthDate)");
+        System.out.println();
+
+        //Инициализация значений
+        System.out.print("\n\nИнициализация значений");
+        reader_1.Init("Кузнецов Кирилл Корнеевич", date_3, address_1, "0112 765423");
+        System.out.print("\nreader_1 = ");
+        reader_1.Display("all");
+        System.out.println();
+
+        //Проверка является ли дата днём рождения читателя
+        System.out.println("\n\nПроверка родился ли автор в заданной стране");
+        reader_3.Display("all");
+        System.out.print(" и ");
+        date_3.Display("DD.MM.YYYY");
+        if (reader_3.IsBirthday(date_3))
+        {
+            System.out.println(": да.");
+        }
+        else
+        {
+            System.out.println(": нет.");
+        }
+
+
+
         //Работа с объектами класса Publishing
         System.out.println("\n\n\nРабота со объектами класса Publishing");
 
