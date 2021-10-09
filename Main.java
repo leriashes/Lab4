@@ -21,7 +21,7 @@ public class Main
         System.out.println();
 
         //Ввод только времени
-       /* System.out.println("\n\nВвод только времени");
+        System.out.println("\n\nВвод только времени");
 
         date_1.ReadTime();
         System.out.printf("\ndate_1 = ");
@@ -34,7 +34,7 @@ public class Main
         date_1.ReadDate();
         System.out.print("\ndate_1 = ");
         date_1.Display("all");
-        System.out.println();*/
+        System.out.println();
 
         //Вывод значений полей в выбранном формате
         System.out.print("\n\nВывод значений полей в выбранном формате (помимо полного вывода)\ndate_1 (hh:mm:ss) = ");
@@ -133,12 +133,12 @@ public class Main
         System.out.println();
 
         //Ввод значений всех полей объекта
-       /* System.out.println("\n\nВвод значений всех полей объекта");
+        System.out.println("\n\nВвод значений всех полей объекта");
 
         author_1.Read();
         System.out.print("\nauthor_1 = ");
         author_1.Display("all");
-        System.out.println();*/
+        System.out.println();
 
         //Вывод значений полей в выбранном формате
         System.out.print("\n\nВывод значений полей в выбранном формате (помимо полного вывода)\nauthor_1 (FullName) = ");
@@ -185,12 +185,12 @@ public class Main
         System.out.println();
 
         //Ввод значений всех полей объекта
-       /* System.out.println("\n\nВвод значений всех полей объекта");
+        System.out.println("\n\nВвод значений всех полей объекта");
 
         address_1.Read();
         System.out.print("\naddress_1 = ");
         address_1.Display();
-        System.out.println();*/
+        System.out.println();
 
         //Инициализация значений
         System.out.print("\n\nИнициализация значений");
@@ -233,11 +233,11 @@ public class Main
         System.out.println();
 
         //Ввод значений всех полей объекта
-        /*System.out.println("\n\nВвод значений всех полей объекта");
+        System.out.println("\n\nВвод значений всех полей объекта");
         reader_1.Read();
         System.out.print("\nreader_1 = ");
         reader_1.Display("all");
-        System.out.println();*/
+        System.out.println();
 
         //Вывод значений полей в выбранном формате
         System.out.print("\n\nВывод значений полей в выбранном формате (помимо полного вывода)\nreader_1 (FullName) = ");
@@ -285,11 +285,11 @@ public class Main
         System.out.println();
 
         //Ввод значений всех полей объекта
-        /*System.out.println("\n\nВвод значений всех полей объекта");
+        System.out.println("\n\nВвод значений всех полей объекта");
         publishing_1.Read();
         System.out.print("\npublishing_1 = ");
         publishing_1.Display();
-        System.out.println();*/
+        System.out.println();
 
         //Инициализация значений
         System.out.print("\n\nИнициализация значений");
@@ -323,7 +323,7 @@ public class Main
         Book book_3 = new Book("Петька и Васька", author_3, 76, "Рассказы", reader_1, publishing_1, 2019);
 
         //Печать созданных объектов
-        /*System.out.print("\nПечать данных  объектов\nbook_1 ");
+        System.out.print("\nПечать данных  объектов\nbook_1 ");
         book_1.Display();
         System.out.print("\n\nbook_2 ");
         book_2.Display();
@@ -332,18 +332,18 @@ public class Main
         System.out.println();*/
 
         //Ввод значений всех полей объекта
-        /*System.out.println("\n\nВвод значений всех полей объекта");
+        System.out.println("\n\nВвод значений всех полей объекта");
 
         book_1.Read();
         System.out.print("\n\nbook_1 ");
         book_1.Display();
-        System.out.println();*/
+        System.out.println();
 
         //Инициализация значений
-        /*System.out.print("\n\nИнициализация значений");
+        System.out.print("\n\nИнициализация значений");
         book_1.Init("Петька и Кот", author_3, 65, "Ужасы", publishing_1, 2005);
         System.out.print("\nbook_1 ");
-        book_1.Display();*/
+        book_1.Display();
 
         book_3.Init("Васька и Пёс", author_2, 124, "Комедия", reader_3, publishing_2, 2012);
         System.out.print("\n\nbook_3 ");
