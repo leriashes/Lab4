@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class Author	//Àגעמנ
 {
 	private String full_name;	//ÔÈÎ

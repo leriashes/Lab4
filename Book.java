@@ -97,7 +97,7 @@ public class Book
 
         System.out.println();
         author.Read();
-        author.NewBook(this);
+        author.NewBook(this); 
 
         f = true;
         System.out.print("\nВведите количество страниц в книге: ");
@@ -192,7 +192,10 @@ public class Book
     {
         if (reader == null)
         {
-            this.reader.ReturnBook(this);
+            if (this.reader != null)
+            {
+                this.reader.ReturnBook(this);
+            }
         }
         else
         {
@@ -219,5 +222,17 @@ public class Book
     public boolean CmpReader(Book second_book)
     {
         return (reader == second_book.reader);
+    }
+
+    //Проверка принадлежности книги читателю
+    public boolean Belongs(Reader reader)
+    {
+        return this.reader == reader;
+    }
+
+    //Проверка принадлежности книги писателю
+    public boolean Belongs(Author author)
+    {
+        return this.author == author;
     }
 }
