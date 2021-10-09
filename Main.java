@@ -256,7 +256,7 @@ public class Main
         System.out.println();
 
         //Проверка является ли дата днём рождения читателя
-        System.out.println("\n\nПроверка родился ли автор в заданной стране");
+        System.out.println("\n\nПроверка является ли дата днём рождения читателя");
         reader_3.Display("all");
         System.out.print(" и ");
         date_3.Display("DD.MM.YYYY");
