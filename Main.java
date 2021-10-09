@@ -329,7 +329,7 @@ public class Main
         book_2.Display();
         System.out.print("\n\nbook_3 ");
         book_3.Display();
-        System.out.println();*/
+        System.out.println();
 
         //Ввод значений всех полей объекта
         System.out.println("\n\nВвод значений всех полей объекта");
