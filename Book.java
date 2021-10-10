@@ -76,7 +76,7 @@ public class Book
     public void Read()
     {
         boolean f = true;
-        Scanner inp = new Scanner(System.in, "cp866");
+        Scanner inp = new Scanner(System.in);
 
         String str;
 

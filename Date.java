@@ -68,7 +68,7 @@ public class Date	//Дата
         String stime;
         int[] time = new int [6];
         boolean f = true;
-        Scanner inp = new Scanner(System.in, "cp866");
+        Scanner inp = new Scanner(System.in);
 
         System.out.print("Введите время (в формате hh:mm:ss): ");
         do
@@ -125,7 +125,7 @@ public class Date	//Дата
         String sdate;
         int[] date = new int [8];
         boolean f = true;
-        Scanner inp = new Scanner(System.in, "cp866");
+        Scanner inp = new Scanner(System.in);
 
         System.out.print("Введите дату (в формате YYYY.MM.DD): ");
         do

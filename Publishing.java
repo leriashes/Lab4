@@ -29,7 +29,7 @@ public class Publishing     //Издательство
     public void Read()
     {
         boolean f = true;
-        Scanner inp = new Scanner(System.in, "cp866");
+        Scanner inp = new Scanner(System.in);
 
         System.out.print("Введите название издательства: ");
         do

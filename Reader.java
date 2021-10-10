@@ -60,7 +60,7 @@ public class Reader
     public void Read()
     {
         boolean f = true;
-        Scanner inp = new Scanner(System.in, "cp866");
+        Scanner inp = new Scanner(System.in);
 
         System.out.print("Введите ФИО читателя: ");
         do
