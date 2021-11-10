@@ -403,5 +403,58 @@ public class Main
         {
             System.out.println("\n\nкнига не у этого читателя.");
         }
+
+        
+        //Работа с массивом объектов класса Book
+        Book[] book_mas = new Book[3];
+
+        //Печать созданных объектов
+        System.out.print("\nПечать данных  объектов\n");
+        for (int i = 0; i < 3; i++)
+        {
+            book_mas[i] = new Book();
+            System.out.printf("\n\nbook_mas[%d] ", i);
+            book_mas[i].Display();
+        }
+
+        //Инициализация значений
+        System.out.print("\n\nИнициализация значений");
+        book_mas[1].Init("Петька и Кот", author_3, 65, "Ужасы", reader_1, publishing_1, 2005);
+        System.out.print("\nbook_mas[1] ");
+        book_mas[1].Display();
+
+        book_mas[2].Init("Васька и Пёс", author_2, 124, "Комедия", reader_3, publishing_2, 2012);
+        System.out.print("\n\nbook_mas[2] ");
+        book_mas[2].Display();
+        System.out.println();
+
+        //Проверка принадлежности книги читателю
+        System.out.println("\n\nПроверка принадлежности книги читателю");
+        book_mas[2].Display();
+        System.out.println("\n\nи \n");
+        reader_1.Display("Full_name");
+        if (book_mas[2].Belongs(reader_1))
+        {
+            System.out.println("\n\nкнига у этого читателя.");
+        }
+        else
+        {
+            System.out.println("\n\nкнига не у этого читателя.");
+        }
+        
+        //Сравнение читателей книг
+        System.out.println("\n\nСравнение читателей книг");
+        book_mas[1].Display();
+        System.out.println("\n\nи \n");
+        book_mas[2].Display();
+        if (book_mas[1].CmpReader(book_mas[2]))
+        {
+            System.out.println("\n\nодин и тот же читатель.");
+        }
+        else
+        {
+            System.out.println("\n\nразные читатели.");
+        }
+
     }
 }
