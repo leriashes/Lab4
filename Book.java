@@ -104,15 +104,7 @@ public class Book
         do
         {
             str = inp.nextLine();
-
-            try 
-            {
-                pages_number = Integer.parseInt(str);
-            }
-            catch (NumberFormatException e)
-            {
-                pages_number = 0;
-            }
+            pages_number = Convert.StringToInt(str);
 
             if (pages_number <= 0)
             {
@@ -148,15 +140,7 @@ public class Book
         do
         {
             str = inp.nextLine();
-
-            try 
-            {
-                publ_year = Integer.parseInt(str);
-            }
-            catch (NumberFormatException e)
-            {
-                publ_year = 0;
-            }
+            publ_year = Convert.StringToInt(str);
 
             if (publ_year <= 0)
             {

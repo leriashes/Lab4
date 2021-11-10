@@ -82,15 +82,7 @@ public class Date	//Дата
             else
             {
                 stime = stime.substring(0, 2) + stime.substring(3, 5) + stime.substring(6);
-
-                try 
-                {
-                    time[0] = Integer.parseInt(stime);
-                }
-                catch (NumberFormatException e)
-                {
-                    time[0] = 0;
-                }
+                time[0] = Convert.StringToInt(stime);
 
                 for (int i = 0; i < 5 && time[0] > 0; i++)
                 {
@@ -139,15 +131,7 @@ public class Date	//Дата
             else
             {
                 sdate = sdate.substring(0, 4) + sdate.substring(5, 7) + sdate.substring(8);
-
-                try 
-                {
-                    date[0] = Integer.parseInt(sdate);
-                }
-                catch (NumberFormatException e)
-                {
-                    date[0] = 0;
-                }
+                date[0] = Convert.StringToInt(sdate);
 
                 for (int i = 0; i < 7 && date[0] > 0; i++)
                 {

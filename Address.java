@@ -77,15 +77,7 @@ public class Address
         do
         {
             str = inp.nextLine();
-
-            try 
-            {
-                house = Integer.parseInt(str);
-            }
-            catch (NumberFormatException e)
-            {
-                house = 0;
-            }
+            house = Convert.StringToInt(str);
 
             if (house <= 0)
             {
@@ -102,15 +94,7 @@ public class Address
         do
         {
             str = inp.nextLine();
-
-            try 
-            {
-                flat = Integer.parseInt(str);
-            }
-            catch (NumberFormatException e)
-            {
-                flat = 0;
-            }
+            flat = Convert.StringToInt(str);
 
             if (flat <= 0)
             {
