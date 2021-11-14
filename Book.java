@@ -3,6 +3,7 @@ import java.lang.Math;
 public class Book
 {
     private static int counter = 0;     //Счётчик книг
+    private static int time = 30;       //Время, на которое можно брать книги
 
 	private String title;			//Название книги
 	private Author author;		//Автор
@@ -12,10 +13,54 @@ public class Book
 	private Publishing publishing;	//Издательство
 	private int publ_year;			//Год
     private int id;     //ID книги
+    private Date borrow_date;       //Дата взятия книги
 
     public static int GetCounter()
     {
         return counter;
+    }
+
+    public static int GetTime()
+    {
+        return time;
+    } 
+
+    public static void SetTime(int days)
+    {
+        if (days >= 1)
+        {
+            time = days;
+        }
+
+        return;
+    }
+
+    public static boolean BorrowBook(Book book, Reader reader, Date date)
+    {
+        boolean result = false;
+
+        if (book.InLib())
+        {
+            book.AddReader(reader);
+            book.borrow_date = date;
+            result = true;
+        }
+
+        return result;
+    }
+
+    public static int BorrowBook(Book book[], int num, Reader reader, Date date)
+    {
+        int result = 0;
+
+        for (int i = 0; i < num; i++)
+        {
+            if (BorrowBook(book[i], reader, date))
+            {
+                result += 1;
+            }
+        }
+        return result;
     }
 
     //Конструктор
@@ -30,6 +75,7 @@ public class Book
         publ_year = 2021;
         counter += 1;
         id = counter;
+        borrow_date = new Date();
     }
 
     //Конструктор с параметром
@@ -44,6 +90,7 @@ public class Book
         this.publ_year = Math.abs(publication_year);
         counter += 1;
         id = counter;
+        borrow_date = new Date();
     }
 
     //Конструктор с параметром
@@ -59,6 +106,7 @@ public class Book
         this.publ_year = Math.abs(publication_year);
         counter += 1;
         id = counter;
+        borrow_date = new Date();
     }
 
     //Инициализация всех полей
@@ -177,12 +225,17 @@ public class Book
         System.out.printf("\nГод публикации: %d", publ_year);
         System.out.printf("\nАвтор: ");
         author.Display("FullName");
-        System.out.printf("\nИздательство: ");
+        System.out.print("\nИздательство: ");
         publishing.Display();
         if (reader != null) 
         {
-            System.out.printf("\nЧитатель: ");
+            System.out.print("\nЧитатель: ");
             reader.Display("[DocNumber] FullName");
+            System.out.print("\nДата взятия книги: ");
+		    borrow_date.Display("DD.MM.YYYY");
+		    System.out.print("\nСрок сдачи книги: ");
+		    Date plus = new Date(time, 0, 0);
+            plus.Add(borrow_date).Display( "DD.MM.YYYY");
         }
     }
 

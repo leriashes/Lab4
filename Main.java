@@ -459,5 +459,27 @@ public class Main
             System.out.println("\n\nразные читатели.");
         }
 
+        Book kniga = new Book();
+	    System.out.printf("\nКниг в библиотеке:%d \nВремя, на которое можно брать книги: %d", Book.GetCounter(), Book.GetTime());
+	    Book.SetTime(14);
+	    Book[] knigi = new Book[3];
+        for (int i = 0; i < 3; i++)
+        {
+            knigi[i] = new Book();
+        }
+
+	    System.out.printf("\n\nКниг в библиотеке:%d \nВремя, на которое можно брать книги: %d\n\n", Book.GetCounter(), Book.GetTime());
+
+	    Book.BorrowBook(kniga, reader_1, Date.Today());
+	    kniga.Display();
+	    System.out.printf("\n\nКоличество выданных книг читателю reader_st2: %d\n\n", Book.BorrowBook(knigi, 2, reader_3, Date.Today()));
+	    System.out.printf("\n\nКоличество выданных книг читателю reader_st1: %d\n\n", Book.BorrowBook(knigi, 3, reader_2, Date.Today()));
+
+        for (int i = 0; i < 3; i++)
+        {
+            System.out.printf("\n\n");
+            knigi[i].Display();
+        }
+
     }
 }
