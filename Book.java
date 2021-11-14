@@ -2,6 +2,8 @@ import java.util.Scanner;
 import java.lang.Math;
 public class Book
 {
+    private static int counter = 0;     //Счётчик книг
+
 	private String title;			//Название книги
 	private Author author;		//Автор
 	private int pages_number;		//Количество страниц
@@ -9,6 +11,12 @@ public class Book
 	private Reader reader;	//Читатель
 	private Publishing publishing;	//Издательство
 	private int publ_year;			//Год
+    private int id;     //ID книги
+
+    public static int GetCounter()
+    {
+        return counter;
+    }
 
     //Конструктор
     public Book()
@@ -20,6 +28,8 @@ public class Book
         genre = "Сказки";
         publishing = new Publishing();
         publ_year = 2021;
+        counter += 1;
+        id = counter;
     }
 
     //Конструктор с параметром
@@ -32,6 +42,8 @@ public class Book
         this.genre = genre;
         this.publishing = publishing;
         this.publ_year = Math.abs(publication_year);
+        counter += 1;
+        id = counter;
     }
 
     //Конструктор с параметром
@@ -45,6 +57,8 @@ public class Book
         this.AddReader(reader);
         this.publishing = publishing;
         this.publ_year = Math.abs(publication_year);
+        counter += 1;
+        id = counter;
     }
 
     //Инициализация всех полей
@@ -156,7 +170,8 @@ public class Book
     //Вывод значений всех полей
     public void Display()
     {
-        System.out.printf("Название: \"%s\"", title);
+        System.out.printf("ID %d", id);
+        System.out.printf("\nНазвание: \"%s\"", title);
         System.out.printf("\nЖанр: %s", genre);
         System.out.printf("\nКоличество страниц: %d", pages_number);
         System.out.printf("\nГод публикации: %d", publ_year);

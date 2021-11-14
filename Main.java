@@ -404,7 +404,8 @@ public class Main
             System.out.println("\n\nкнига не у этого читателя.");
         }
 
-        
+        System.out.printf("\n\nКниг в библиотеке: %d\n", Book.GetCounter());
+
         //Работа с массивом объектов класса Book
         Book[] book_mas = new Book[3];
 
@@ -416,6 +417,8 @@ public class Main
             System.out.printf("\n\nbook_mas[%d] ", i);
             book_mas[i].Display();
         }
+
+        System.out.printf("\n\nКниг в библиотеке: %d", Book.GetCounter());
 
         //Инициализация значений
         System.out.print("\n\nИнициализация значений");
