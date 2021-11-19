@@ -78,6 +78,21 @@ public class Book
         borrow_date = new Date();
     }
 
+    //Конструктор с 1 параметром
+    public Book(String title)
+    {
+        this.title = title;
+        author = new Author();
+        author.NewBook(this);
+        pages_number = 50;
+        genre = "Сказки";
+        publishing = new Publishing();
+        publ_year = 2021;
+        counter += 1;
+        id = counter;
+        borrow_date = new Date();
+    }
+
     //Конструктор с параметром
     public Book(String title, Author author, int pages_number, String genre, Publishing publishing, int publication_year)
     {

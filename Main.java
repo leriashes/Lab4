@@ -319,7 +319,7 @@ public class Main
         Book book_1 = new Book();	//Создание через конструктор без параметров
         
         //Создание через конструкторы с параметрами
-        Book book_2 = new Book("Новый мир", author_2, 121, "Фантастика", publishing_2, 2012);
+        Book book_2 = new Book("Новый мир");
         Book book_3 = new Book("Петька и Васька", author_3, 76, "Рассказы", reader_1, publishing_1, 2019);
 
         //Печать созданных объектов
@@ -413,7 +413,7 @@ public class Main
         System.out.print("\nПечать данных  объектов\n");
         for (int i = 0; i < 3; i++)
         {
-            book_mas[i] = new Book();
+            book_mas[i] = new Book("Новая книга");
             System.out.printf("\n\nbook_mas[%d] ", i);
             book_mas[i].Display();
         }
