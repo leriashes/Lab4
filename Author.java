@@ -59,15 +59,34 @@ public class Author	//Автор
         System.out.print("Введите ФИО автора: ");
         do
         {
-            full_name = inp.nextLine();
+            try
+            {
+                full_name = inp.nextLine();
 
-            if (full_name.length() == 0)
-            {
-                System.out.print("\nОшибка ввода! Повторите ввод: ");
+                for (int i = 0; i < full_name.length(); i++)
+                {
+                    if (full_name.charAt(i) == ' ')
+                    {
+                        if (i == 0 || i < full_name.length() - 1 && full_name.charAt(i + 1) == ' ' || i == full_name.length() - 1)
+                        {
+                            full_name = full_name.substring(0, i) + full_name.substring(i + 1, full_name.length());
+                            i--;
+                        }
+                    }
+                }
+
+                if (full_name.length() == 0)
+                {
+                    throw new Exception("\nОшибка ввода! Повторите ввод: ");
+                }
+                else
+                {
+                    f = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                f = false;
+                System.out.print(ex.getMessage());
             }
         } while (f);
 
@@ -78,15 +97,34 @@ public class Author	//Автор
         System.out.print("\nВведите страну происхождения автора: ");
         do
         {
-            country = inp.nextLine();
+            try
+            {
+                country = inp.nextLine();
 
-            if (country.length() == 0)
-            {
-                System.out.print("\nОшибка ввода! Повторите ввод: ");
+                for (int i = 0; i < country.length(); i++)
+                {
+                    if (country.charAt(i) == ' ')
+                    {
+                        if (i == 0 || i < country.length() - 1 && country.charAt(i + 1) == ' ' || i == country.length() - 1)
+                        {
+                            country = country.substring(0, i) + country.substring(i + 1, country.length());
+                            i--;
+                        }
+                    }
+                }
+
+                if (country.length() == 0)
+                {
+                    throw new Exception("\nОшибка ввода! Повторите ввод: ");
+                }
+                else
+                {
+                    f = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                f = false;
+                System.out.print(ex.getMessage());
             }
         } while (f);
     }

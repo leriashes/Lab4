@@ -160,15 +160,34 @@ public class Book
         System.out.print("Введите название книги: ");
         do
         {
-            title = inp.nextLine();
+            try
+            {
+                title = inp.nextLine();
 
-            if (title.length() == 0)
-            {
-                System.out.print("\nОшибка ввода! Повторите ввод: ");
+                for (int i = 0; i < title.length(); i++)
+                {
+                    if (title.charAt(i) == ' ')
+                    {
+                        if (i == 0 || i < title.length() - 1 && title.charAt(i + 1) == ' ' || i == title.length() - 1)
+                        {
+                            title = title.substring(0, i) + title.substring(i + 1, title.length());
+                            i--;
+                        }
+                    }
+                }
+
+                if (title.length() == 0)
+                {
+                    throw new Exception("\nОшибка ввода! Повторите ввод: ");
+                }
+                else
+                {
+                    f = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                f = false;
+                System.out.print(ex.getMessage());
             }
         } while (f);
 
@@ -197,15 +216,34 @@ public class Book
         System.out.print("\nВведите жанр: ");
         do
         {
-            genre = inp.nextLine();
+            try
+            {
+                genre = inp.nextLine();
 
-            if (genre.length() == 0)
-            {
-                System.out.print("\nОшибка ввода! Повторите ввод: ");
+                for (int i = 0; i < genre.length(); i++)
+                {
+                    if (genre.charAt(i) == ' ')
+                    {
+                        if (i == 0 || i < genre.length() - 1 && genre.charAt(i + 1) == ' ' || i == genre.length() - 1)
+                        {
+                            genre = genre.substring(0, i) + genre.substring(i + 1, genre.length());
+                            i--;
+                        }
+                    }
+                }
+
+                if (genre.length() == 0)
+                {
+                    throw new Exception("\nОшибка ввода! Повторите ввод: ");
+                }
+                else
+                {
+                    f = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                f = false;
+                System.out.print(ex.getMessage());
             }
         } while (f);
 

@@ -65,15 +65,34 @@ public class Reader
         System.out.print("Введите ФИО читателя: ");
         do
         {
-            full_name = inp.nextLine();
+            try
+            {
+                full_name = inp.nextLine();
 
-            if (full_name.length() == 0)
-            {
-                System.out.print("\nОшибка ввода! Повторите ввод: ");
+                for (int i = 0; i < full_name.length(); i++)
+                {
+                    if (full_name.charAt(i) == ' ')
+                    {
+                        if (i == 0 || i < full_name.length() - 1 && full_name.charAt(i + 1) == ' ' || i == full_name.length() - 1)
+                        {
+                            full_name = full_name.substring(0, i) + full_name.substring(i + 1, full_name.length());
+                            i--;
+                        }
+                    }
+                }
+
+                if (full_name.length() == 0)
+                {
+                    throw new Exception("\nОшибка ввода! Повторите ввод: ");
+                }
+                else
+                {
+                    f = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                f = false;
+                System.out.print(ex.getMessage());
             }
         } while (f);
 
@@ -87,15 +106,34 @@ public class Reader
         System.out.print("\nВведите номер документа, удостовряющего личность: ");
         do
         {
-            doc_number = inp.nextLine();
+            try
+            {
+                doc_number = inp.nextLine();
 
-            if (doc_number.length() == 0)
-            {
-                System.out.print("\nОшибка ввода! Повторите ввод: ");
+                for (int i = 0; i < doc_number.length(); i++)
+                {
+                    if (doc_number.charAt(i) == ' ')
+                    {
+                        if (i == 0 || i < doc_number.length() - 1 && doc_number.charAt(i + 1) == ' ' || i == doc_number.length() - 1)
+                        {
+                            doc_number = doc_number.substring(0, i) + doc_number.substring(i + 1, doc_number.length());
+                            i--;
+                        }
+                    }
+                }
+
+                if (doc_number.length() == 0)
+                {
+                    throw new Exception("\nОшибка ввода! Повторите ввод: ");
+                }
+                else
+                {
+                    f = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                f = false;
+                System.out.print(ex.getMessage());
             }
         } while (f);
     }

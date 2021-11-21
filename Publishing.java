@@ -34,15 +34,34 @@ public class Publishing     //Издательство
         System.out.print("Введите название издательства: ");
         do
         {
-            name = inp.nextLine();
+            try
+            {
+                name = inp.nextLine();
 
-            if (name.length() == 0)
-            {
-                System.out.print("\nОшибка ввода! Повторите ввод: ");
+                for (int i = 0; i < name.length(); i++)
+                {
+                    if (name.charAt(i) == ' ')
+                    {
+                        if (i == 0 || i < name.length() - 1 && name.charAt(i + 1) == ' ' || i == name.length() - 1)
+                        {
+                            name = name.substring(0, i) + name.substring(i + 1, name.length());
+                            i--;
+                        }
+                    }
+                }
+
+                if (name.length() == 0)
+                {
+                    throw new Exception("\nОшибка ввода! Повторите ввод: ");
+                }
+                else
+                {
+                    f = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                f = false;
+                System.out.print(ex.getMessage());
             }
         } while (f);
 
@@ -50,15 +69,34 @@ public class Publishing     //Издательство
         System.out.print("\nВведите населённый пункт, в котором находится издательство (например: г. Барнаул): ");
         do
         {
-            city = inp.nextLine();
+            try
+            {
+                city = inp.nextLine();
 
-            if (city.length() == 0)
-            {
-                System.out.print("\nОшибка ввода! Повторите ввод: ");
+                for (int i = 0; i < city.length(); i++)
+                {
+                    if (city.charAt(i) == ' ')
+                    {
+                        if (i == 0 || i < city.length() - 1 && city.charAt(i + 1) == ' ' || i == city.length() - 1)
+                        {
+                            city = city.substring(0, i) + city.substring(i + 1, city.length());
+                            i--;
+                        }
+                    }
+                }
+
+                if (city.length() == 0)
+                {
+                    throw new Exception("\nОшибка ввода! Повторите ввод: ");
+                }
+                else
+                {
+                    f = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                f = false;
+                System.out.print(ex.getMessage());
             }
         } while (f);
     }

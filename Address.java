@@ -44,15 +44,34 @@ public class Address
         System.out.print("Введите название населённого пункта (например: г. Барнаул): ");
         do
         {
-            city = inp.nextLine();
+            try
+            {
+                city = inp.nextLine();
 
-            if (city.length() == 0)
-            {
-                System.out.print("\nОшибка ввода! Повторите ввод: ");
+                for (int i = 0; i < city.length(); i++)
+                {
+                    if (city.charAt(i) == ' ')
+                    {
+                        if (i == 0 || i < city.length() - 1 && city.charAt(i + 1) == ' ' || i == city.length() - 1)
+                        {
+                            city = city.substring(0, i) + city.substring(i + 1, city.length());
+                            i--;
+                        }
+                    }
+                }
+
+                if (city.length() == 0)
+                {
+                    throw new Exception("\nОшибка ввода! Повторите ввод: ");
+                }
+                else
+                {
+                    f = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                f = false;
+                System.out.print(ex.getMessage());
             }
         } while (f);
 
@@ -60,15 +79,34 @@ public class Address
         System.out.print("\nВведите название улицы (например: ул. Попова): ");
         do
         {
-            street = inp.nextLine();
+            try
+            {
+                street = inp.nextLine();
 
-            if (street.length() == 0)
-            {
-                System.out.print("\nОшибка ввода! Повторите ввод: ");
+                for (int i = 0; i < street.length(); i++)
+                {
+                    if (street.charAt(i) == ' ')
+                    {
+                        if (i == 0 || i < street.length() - 1 && street.charAt(i + 1) == ' ' || i == street.length() - 1)
+                        {
+                            street = street.substring(0, i) + street.substring(i + 1, street.length());
+                            i--;
+                        }
+                    }
+                }
+
+                if (street.length() == 0)
+                {
+                    throw new Exception("\nОшибка ввода! Повторите ввод: ");
+                }
+                else
+                {
+                    f = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                f = false;
+                System.out.print(ex.getMessage());
             }
         } while (f);
 
