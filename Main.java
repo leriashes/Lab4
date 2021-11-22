@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main 
 {
     public static void main(String[] args) 
@@ -481,5 +482,75 @@ public class Main
             knigi[i].Display();
         }
 
+        //Работа с одномерным массивом
+        Book[] odnm_mas = new Book[3];
+        for (int i = 0; i < 3; i++)
+        {
+            odnm_mas[i] = new Book();
+        }
+        System.out.printf("Работа с одномерным массивом\nКниг в библиотеке:%d ", Book.GetCounter());
+
+        for (int i = 0; i < 3; i++)
+        {
+            System.out.printf("\n\nodnm_mas[%d] ", i);
+            odnm_mas[i].Display();
+        }
+
+        int k, d;
+        String index;
+        Scanner inp = new Scanner(System.in);
+        do
+        {
+            System.out.printf("\n\nВведите индекс элемента массива для ввода: ");
+            index = inp.nextLine();
+            k = Convert.StringToInt(index);
+        } while (k < 0 || k > 2);
+
+        System.out.printf("%d\n\nВвод информации о книге odnm_mas[%d]\n", k, k);
+        odnm_mas[k].Read();
+
+        System.out.printf("\n\nodnm_mas[%d] ", k);
+        odnm_mas[k].Display();
+
+        //Работа с двумерным массивом
+        Book[][] dvum_mas = new Book[2][2];
+        for (int i = 0; i < 2; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                dvum_mas[i][j] = new Book();
+            }
+        }
+        System.out.printf("Работа с двумерным массивом\nКниг в библиотеке:%d ", Book.GetCounter());
+
+        for (int i = 0; i < 2; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                System.out.printf("\n\ndvum_mas[%d][%d] ", i, j);
+                dvum_mas[i][j].Display();
+            }
+        }
+
+        do
+        {
+            System.out.printf("\n\nВведите номер строки двумерного массива: ");
+            index = inp.nextLine();
+            k = Convert.StringToInt(index);
+        } while (k < 0 || k > 1);
+        System.out.printf("%d", k);
+
+        do
+        {
+            System.out.printf("\n\nВведите номер столбца двумерного массива: ");
+            index = inp.nextLine();
+            d = Convert.StringToInt(index);
+        } while (d < 0 || d > 1);
+
+        System.out.printf("%d\n\nВвод информации о книге dvum_mas[%d][%d]\n", d, k, d);
+        dvum_mas[k][d].Read();
+
+        System.out.printf("\n\ndvum_mas[%d][%d]", k, d);
+        dvum_mas[k][d].Display();
     }
 }
