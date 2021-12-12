@@ -552,5 +552,16 @@ public class Main
 
         System.out.printf("\n\ndvum_mas[%d][%d]", k, d);
         dvum_mas[k][d].Display();
+
+        Date fdate = new Date(28, 11, 2001);
+	    Address faddress = new Address();
+	    Reader freader = new Reader("Шишкова Валентина Алексеевна", fdate, faddress, 123456789);
+	    Author fauthor = new Author("Сьюэлл Анна", date_1, "Великобритания");
+	    Publishing fpublishing = new Publishing();
+
+	    ForeignBook fbook = new ForeignBook("Good Morning", fauthor, 345, "Фантастика", freader, fpublishing, 2021, "Английский");
+        ForeignBook fbook1 = new ForeignBook();
+	
+	    fbook1.Init("Black Beauty", fauthor, 289, "Рассказы", publishing_1, 2019, "Английский");
     }
 }
