@@ -1,4 +1,4 @@
-class ForeignBook extends Book
+public class ForeignBook extends Book
 {
     private String language;
 

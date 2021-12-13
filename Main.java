@@ -322,7 +322,7 @@ public class Main
         System.out.printf("\n\nОтвязка читателя\nbook_2 %s\n", book_2);
 
         //Проверка принадлежности книги читателю
-        System.out.printf("\n\nПроверка принадлежности книги читателю\n%s\n\nи \n\n");
+        System.out.printf("\n\nПроверка принадлежности книги читателю\n%s\n\nи \n\n", book_2);
         reader_1.Display("Full_name");
         if (book_2.Belongs(reader_1))
         {
@@ -479,5 +479,7 @@ public class Main
 	    fbook1.Init("Black Beauty", fauthor, 289, "Рассказы", publishing_1, 2019, "Английский");
 
 
+        System.out.printf("\n\nИнформация об авторе author_st: %s", author_1.About());
+	    System.out.printf("\n\nИнформация о читателе reader_st: %s", reader_1.About());
     }
 }

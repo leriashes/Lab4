@@ -1,9 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-public class Reader
+public class Reader extends Person
 {
-	private String full_name;	//ФИО
-	private Date birth;			//Дата рождения
 	private Address address;	//Адрес
 	private String doc_number;		//Номер документа, удостоверяющего личность
     private ArrayList<Book> books;  //Книги, которые находятся у читателя
@@ -36,6 +34,12 @@ public class Reader
         this.address = address;
         this.doc_number = Integer.toString(doc_number);
         books = new ArrayList<Book>();
+    }
+
+    public void Init(String full_name, Date birth_date)
+    {
+        this.full_name = full_name;
+        birth = new Date(birth_date);
     }
 
     //Инициализация всех полей
@@ -222,5 +226,10 @@ public class Reader
             result = true;
         }
         return result;
+    }
+
+    public String About()
+    {
+        return "[" + doc_number + "] " + full_name + " (Дата рождения: " + birth + ". Адрес проживания: " + address + ") ";
     }
 }

@@ -1,9 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-public class Author	//Автор
+public class Author	extends Person
 {
-	private String full_name;	//ФИО
-	private Date birth;			//Дата рождения
 	private String country;	//Страна
     private ArrayList<Book> books;      //Книги, написанные писателем
 
@@ -32,6 +30,12 @@ public class Author	//Автор
         birth = new Date(0, 0,  0, day, month, year);
         this.country = country;
         books = new ArrayList<Book>();
+    }
+
+    public void Init(String full_name, Date birth_date)
+    {
+        this.full_name = full_name;
+        birth = new Date(birth_date);
     }
 
     //Инициализация значений всех полей
@@ -197,5 +201,10 @@ public class Author	//Автор
         {
             books.add(book);
         }
+    }
+
+    public String About()
+    {
+        return full_name + " (" + birth + ", " + country + ")";
     }
 }
