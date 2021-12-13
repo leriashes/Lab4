@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 public class Book
+implements ClassDisplay
 {
     protected static int counter = 0;     //—чЄтчик книг
     protected static int time = 30;       //¬рем€, на которое можно брать книги

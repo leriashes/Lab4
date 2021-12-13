@@ -1,4 +1,5 @@
 public class ForeignBook extends Book
+implements ClassDisplay
 {
     private String language;
 

@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class Address
+implements ClassDisplay
 {
 	private String city;	//Название населённого пункта
 	private String street;	//Название улицы

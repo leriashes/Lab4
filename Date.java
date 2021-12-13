@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoField;
 import java.lang.Math;
-public class Date	//Дата
+public class Date
 {
 	private int sec;	//Секунды
 	private int min;	//Минуты
