@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 public class Book
-implements ClassDisplay
+implements ClassDisplay, Cloneable
 {
     protected static int counter = 0;     //Счётчик книг
     protected static int time = 30;       //Время, на которое можно брать книги
@@ -123,6 +123,20 @@ implements ClassDisplay
         counter += 1;
         id = counter;
         borrow_date = new Date();
+    }
+
+    public Object clone()
+    {
+        try
+        {
+            return (Book)super.clone();
+        }
+        catch(CloneNotSupportedException e)
+        {
+
+        }
+
+        return this;
     }
 
     //Инициализация всех полей

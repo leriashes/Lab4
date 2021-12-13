@@ -104,21 +104,15 @@ public class Main
         Author author_3 = new Author("Сидорова Светлана Сергеевна", 12, 12, 1972, "Беларусь");
 
         //Печать созданных объектов
-        System.out.print("\nПечать данных объектов\nauthor_1 = ");
-        author_1.Display("all");
-        System.out.print("\nauthor_2 = ");
-        author_2.Display("all");
-        System.out.print("\nauthor_3 = ");
-        author_3.Display("all");
-        System.out.println();
+        System.out.printf("\nПечать данных объектов\nauthor_1 = %s", author_1);
+        System.out.printf("\nauthor_2 = %s", author_2);
+        System.out.printf("\nauthor_3 = %s\n", author_3);
 
         //Ввод значений всех полей объекта
         System.out.println("\n\nВвод значений всех полей объекта");
 
         author_1.Read();
-        System.out.print("\nauthor_1 = ");
-        author_1.Display("all");
-        System.out.println();
+        System.out.printf("\nauthor_1 = %s\n", author_1);
 
         //Вывод значений полей в выбранном формате
         System.out.print("\n\nВывод значений полей в выбранном формате (помимо полного вывода)\nauthor_1 (FullName) = ");
@@ -132,13 +126,10 @@ public class Main
         //Инициализация значений
         System.out.print("\n\nИнициализация значений");
         author_2.Init("Паркер Энн", date_1, "США");
-        System.out.print("\nauthor_2 = ");
-        author_2.Display("all");
-        System.out.println();
+        System.out.printf("\nauthor_2 = %s\n", author_2);
 
         //Проверка родился ли автор в заданной стране
-        System.out.println("\n\nПроверка родился ли автор в заданной стране");
-        author_1.Display("all");
+        System.out.printf("\n\nПроверка родился ли автор в заданной стране\n%s", author_1);
         System.out.print(" и страна Россия");
         if (author_1.BornIn("Россия"))
         {
@@ -481,5 +472,13 @@ public class Main
 
         System.out.printf("\n\nИнформация об авторе author_st: %s", author_1.About());
 	    System.out.printf("\n\nИнформация о читателе reader_st: %s", reader_1.About());
+
+        //Мелкое копирование
+        book_1 = (Book)book_2.clone();
+        System.out.printf("\nbook_1 %s\n", book_1);
+        System.out.printf("\nbook_2 %s\n", book_2);
+        book_2.Init("Black Beauty", author_1, 289, "Рассказы", publishing_1, 2019);
+        System.out.printf("\nbook_2 %s\n", book_2);
+        System.out.printf("\nbook_1 %s\n", book_1);
     }
 }
