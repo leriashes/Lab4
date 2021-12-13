@@ -46,4 +46,20 @@ class ForeignBook extends Book
 
         return;
     }
+
+    public String toString()
+    {
+        String result;
+        result = "ID " + id + "\nНазвание: \"" + title + "\"" + "\nЖанр: " + genre + "\nКоличество страниц: " + pages_number + "\nГод публикации: " + publ_year + "\nАвтор: " + author + "\nИздательство: " + publishing + "\nЯзык: " + language;
+
+        if (reader != null) 
+        {
+            result += "\nЧитатель: " + reader + "\nДата взятия книги: " + borrow_date + "\nСрок сдачи книги: ";
+		    Date plus = new Date(time, 0, 0);
+            result += plus.Add(borrow_date);
+        }
+
+        return result;
+    }
+
 }

@@ -172,6 +172,11 @@ public class Author	//Автор
         }
     }
 
+    public String toString()
+    {
+        return full_name + " (" + birth + ", " + country + ")";
+    }
+
     //Проверка родился ли автор в указанной стране
     public boolean BornIn(String country)
     {

@@ -107,6 +107,11 @@ public class Publishing     //Издательство
         System.out.printf("%s (%s)", name, city);
     }
 
+    public String toString()
+    {
+        return name + " (" + city + ")";
+    }
+
     //Проверка находится ли издательство в заданном городе
     public boolean IsHere(String city)
     {

@@ -185,6 +185,11 @@ public class Reader
         }
     }
 
+    public String toString()
+    {
+        return "[" + doc_number + "] " + full_name + " (Дата рождения: " + birth + ". Адрес проживания: " + address + ") ";
+    }
+
     //Проверка является ли день днём рождения читателя
     public boolean IsBirthday(Date day)
     {

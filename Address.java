@@ -151,6 +151,11 @@ public class Address
         System.out.printf("%s, %s %d, %d", city, street, house, flat);
     }
 
+    public String toString()
+    {
+        return city + ", " + street + " " + house + ", " + flat;
+    }
+
     //Проверка совпадения города
     public boolean City(String city)
     {
