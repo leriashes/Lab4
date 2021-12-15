@@ -3,6 +3,25 @@ public class Main
 {
     public static void main(String[] args) 
     {
+        Book[] b = new Book[4];
+        for (int i = 0; i < 4; i++)
+        {
+            b[i] = new Book();
+        }
+        Array<Book> abook = new Array<Book>(b);
+        abook.Read();
+        boolean fg = abook.AllInLib();
+        System.out.printf("\n\nВсе книги из массива находятся в библиотеке: ");
+        if (fg)
+        {
+            System.out.print("да.\n");
+        }
+        else
+        {
+            System.out.print("нет.\n");
+        }
+
+
         //Работа с объектами класса Date
         System.out.println("Работа с объектами класса Date");
 
