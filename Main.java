@@ -3,6 +3,8 @@ public class Main
 {
     public static void main(String[] args) 
     {
+        Scanner inp = new Scanner(System.in);
+
         ArrayList knigki = new ArrayList();
 
         Book b1 = new Book("—тарый мир");
@@ -39,6 +41,29 @@ public class Main
                 System.out.printf("%s\n\n", element);
             }
         }
+
+        System.out.print("¬ведите букву, на которую должно начинатс€ название книги: ");
+        String str = inp.nextLine();
+
+        Book b3 = new Book("—ыч и Єжик");
+        Book b4 = new Book("—орока и сыр");
+
+        knigki.add(b3);
+	    knigki.add(b4);
+
+        System.out.print("\n ниги коллекции, удовлетвор€ющие запросу\n\n");
+        vb = knigki.iterator();
+        while (vb.hasNext())
+        {
+            Object element = vb.next();
+            String gc = element.getClass().getSimpleName();
+            if (gc.equals("Book") || gc.equals("ForeignBook"))
+            {
+                if (element.toString().charAt(16) == str.charAt(0))
+                    System.out.printf("%s\n\n", element);
+            }
+        }
+
 
         Book[] b = new Book[4];
         for (int i = 0; i < 4; i++)
@@ -462,7 +487,7 @@ public class Main
 
         int k, d;
         String index;
-        Scanner inp = new Scanner(System.in);
+        
         do
         {
             System.out.printf("\n\n¬ведите индекс элемента массива дл€ ввода: ");

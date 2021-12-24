@@ -382,4 +382,9 @@ implements ClassDisplay, Cloneable, Comparable<Book>
             return 1;
         }
     }
+
+    public String GetTitle()
+    {
+        return title;
+    }
 }
