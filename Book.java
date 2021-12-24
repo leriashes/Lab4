@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 public class Book
-implements ClassDisplay, Cloneable
+implements ClassDisplay, Cloneable, Comparable<Book>
 {
     protected static int counter = 0;     //—чЄтчик книг
     protected static int time = 30;       //¬рем€, на которое можно брать книги
@@ -369,5 +369,17 @@ implements ClassDisplay, Cloneable
     public boolean Belongs(Author author)
     {
         return this.author == author;
+    }
+
+    public int compareTo(Book book2)
+    {
+        if (title.charAt(0) <= book2.title.charAt(0))
+        {
+            return -1;
+        }
+        else
+        {
+            return 1;
+        }
     }
 }

@@ -1,8 +1,45 @@
-import java.util.Scanner;
+import java.util.*;
 public class Main 
 {
     public static void main(String[] args) 
     {
+        ArrayList knigki = new ArrayList();
+
+        Book b1 = new Book("Старый мир");
+	    Book b2 = new Book("Новый мир");
+	    ForeignBook fb1 = new ForeignBook();
+
+        knigki.add(b1);
+        knigki.add(fb1);
+        knigki.add(b2);
+
+        Iterator vb = knigki.iterator();
+
+        System.out.print("Коллекция до сортировки\n\n");
+        while (vb.hasNext())
+        {
+            Object element = vb.next();
+            String gc = element.getClass().getSimpleName();
+            if (gc.equals("Book") || gc.equals("ForeignBook"))
+            {
+                System.out.printf("%s\n\n", element);
+            }
+        }
+
+        Collections.sort(knigki);
+
+        System.out.print("Коллекция после сортировки\n\n");
+        vb = knigki.iterator();
+        while (vb.hasNext())
+        {
+            Object element = vb.next();
+            String gc = element.getClass().getSimpleName();
+            if (gc.equals("Book") || gc.equals("ForeignBook"))
+            {
+                System.out.printf("%s\n\n", element);
+            }
+        }
+
         Book[] b = new Book[4];
         for (int i = 0; i < 4; i++)
         {
